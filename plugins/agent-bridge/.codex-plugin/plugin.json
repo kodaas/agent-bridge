@@ -1,0 +1,41 @@
+{
+  "name": "agent-bridge",
+  "version": "0.2.0",
+  "description": "Lets Codex and Claude Code sessions on the same project see each other and exchange signed, end-to-end encrypted messages.",
+  "author": {
+    "name": "Fiyinfoluwa John Ajala",
+    "url": "https://github.com/kodaas"
+  },
+  "homepage": "https://github.com/kodaas/agent-bridge",
+  "repository": "https://github.com/kodaas/agent-bridge",
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude code",
+    "multi-agent",
+    "coordination",
+    "messaging",
+    "mcp"
+  ],
+  "mcpServers": "./mcp/codex.json",
+  "hooks": "./hooks/codex.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Bridge",
+    "shortDescription": "Talk to other Codex and Claude Code sessions",
+    "longDescription": "See which Codex and Claude Code sessions are working on this project, what each is doing, and exchange signed, end-to-end encrypted messages with them to coordinate work, hand off tasks, and avoid conflicting edits. Everything stays on this machine.",
+    "developerName": "Fiyinfoluwa John Ajala",
+    "websiteURL": "https://github.com/kodaas/agent-bridge",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Who else is working on this project right now?",
+      "Tell the Claude session that I'm refactoring the auth module",
+      "Wait for a message from the other session and handle it"
+    ]
+  }
+}

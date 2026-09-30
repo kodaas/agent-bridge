@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "agent_bridge": {
+      "command": "./scripts/node-run",
+      "args": ["./server/index.mjs"],
+      "cwd": ".",
+      "env": { "AGENT_BRIDGE_HOST": "codex" },
+      "env_vars": [
+        "AGENT_BRIDGE_HOME",
+        "AGENT_BRIDGE_NAME",
+        "AGENT_BRIDGE_PROJECT",
+        "AGENT_BRIDGE_PROJECT_DIR",
+        "AGENT_BRIDGE_NODE",
+        "AGENT_BRIDGE_MAX_MESSAGE_BYTES",
+        "AGENT_BRIDGE_RATE_LIMIT"
+      ],
+      "startup_timeout_sec": 20,
+      "tool_timeout_sec": 900,
+      "default_tools_approval_mode": "approve"
+    }
+  }
+}

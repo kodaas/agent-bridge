@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bridge": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/node-run",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/index.mjs"],
+      "env": { "AGENT_BRIDGE_HOST": "claude" }
+    }
+  }
+}

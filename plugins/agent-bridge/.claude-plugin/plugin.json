@@ -1,0 +1,22 @@
+{
+  "name": "agent-bridge",
+  "displayName": "Agent Bridge",
+  "version": "0.2.0",
+  "description": "Lets Claude Code and Codex sessions on the same project see each other and exchange signed, end-to-end encrypted messages.",
+  "author": {
+    "name": "Fiyinfoluwa John Ajala",
+    "url": "https://github.com/kodaas"
+  },
+  "homepage": "https://github.com/kodaas/agent-bridge",
+  "repository": "https://github.com/kodaas/agent-bridge",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "multi-agent",
+    "coordination",
+    "messaging",
+    "mcp"
+  ],
+  "mcpServers": "./mcp/claude.json",
+  "hooks": "./hooks/claude.json"
+}

@@ -1,0 +1,67 @@
+{
+  "description": "agent-bridge: deliver peer messages and share session activity",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:agent-bridge:bridge",
+            "tool": "bridge_hook",
+            "input": {
+              "event": "${hook_event_name}",
+              "session_id": "${session_id}",
+              "cwd": "${cwd}"
+            },
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:agent-bridge:bridge",
+            "tool": "bridge_hook",
+            "input": {
+              "event": "${hook_event_name}",
+              "session_id": "${session_id}",
+              "cwd": "${cwd}",
+              "tool_name": "${tool_name}",
+              "tool_input": "${tool_input}"
+            },
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:agent-bridge:bridge",
+            "tool": "bridge_hook",
+            "input": {
+              "event": "${hook_event_name}",
+              "session_id": "${session_id}",
+              "cwd": "${cwd}"
+            },
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/node-run",
+            "args": [
+              "${CLAUDE_PLUGIN_ROOT}/server/watch.mjs"
+            ],
+            "asyncRewake": true,
+            "timeout": 3600
+          }
+        ]
+      }
+    ]
+  }
+}

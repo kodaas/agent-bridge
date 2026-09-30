@@ -1,0 +1,19 @@
+{
+  "name": "agent-bridge",
+  "owner": {
+    "name": "Fiyinfoluwa John Ajala",
+    "url": "https://github.com/kodaas"
+  },
+  "metadata": {
+    "description": "Cross-agent messaging for Claude Code and Codex"
+  },
+  "plugins": [
+    {
+      "name": "agent-bridge",
+      "source": "./plugins/agent-bridge",
+      "description": "Lets Claude Code and Codex sessions on the same project see each other and exchange signed, end-to-end encrypted messages.",
+      "version": "0.2.0",
+      "category": "development"
+    }
+  ]
+}

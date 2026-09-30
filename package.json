@@ -1,0 +1,23 @@
+{
+  "name": "agent-bridge",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Cross-agent messaging plugin for Claude Code and Codex",
+  "author": "Fiyinfoluwa John Ajala",
+  "license": "MIT",
+  "homepage": "https://github.com/kodaas/agent-bridge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodaas/agent-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kodaas/agent-bridge/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

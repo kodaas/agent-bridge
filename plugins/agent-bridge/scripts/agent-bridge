@@ -1,0 +1,13 @@
+#!/bin/sh
+# Command-line entry point: agent-bridge sessions | doctor | purge
+set -eu
+self=$0
+while [ -L "$self" ]; do
+  target=$(readlink "$self")
+  case $target in
+    /*) self=$target ;;
+    *) self=$(dirname "$self")/$target ;;
+  esac
+done
+dir=$(cd "$(dirname "$self")" && pwd)
+exec "$dir/node-run" "$dir/../server/cli.mjs" "$@"

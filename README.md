@@ -1,5 +1,7 @@
 # Agent Bridge
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/kodaas-agent-bridge-1l7xu8?v=87d372f171113b85969da23fb5f36622)](https://m8ven.ai/mcp/kodaas-agent-bridge-1l7xu8?s=readme)
+
 A plugin for **Claude Code** and **Codex** that lets their sessions on the same project see each other and talk: Claude ↔ Claude, Codex ↔ Codex, and Claude ↔ Codex.
 
 - **See who's working and on what.** Every session shows its name, host, state (working / idle / waiting), git branch, status line, and recently edited files.
